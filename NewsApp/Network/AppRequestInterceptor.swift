@@ -19,11 +19,11 @@ class AppRequestInterceptor: RequestInterceptor {
         urlRequest.setValue("application/json", forHTTPHeaderField: "Accept")
         urlRequest.setValue(L102Language.getCurrentLanguage(), forHTTPHeaderField: "Accept-Language")
         
-         let token = "" //UserDefaults.userData?.token {
+         let token = "57c64a59ec4649afbbada24f5244a4f3" //UserDefaults.userData?.token {
 //            let token = "20|2apPMt1UjN3d9XhVqPaOlLunWBoj1AAFm4InpMVr"
        // let token = "1|5kLA8aOIMg5ImcRdjd6k7IT0oigHAr4N6Hi03W6r"
 //        let token = "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwczovL3dhc3NlbG5hLnBocHY4LmFhaXQtZC5jb20vYXBpL2NsaWVudC9sb2dpbiIsImlhdCI6MTY3Mzg2MjAzNSwiZXhwIjoxNzA1Mzk4MDM1LCJuYmYiOjE2NzM4NjIwMzUsImp0aSI6IjVraXdWS1d3WlJhT1p1Y1ciLCJzdWIiOiIxNjEiLCJwcnYiOiIyM2JkNWM4OTQ5ZjYwMGFkYjM5ZTcwMWM0MDA4NzJkYjdhNTk3NmY3In0.h23yIwI3kiCyYcgEdF8mdn24hntzwOSgbA2qVPUpPsI"
-            urlRequest.setValue("Bearer \(token)", forHTTPHeaderField: "Authorization")
+            urlRequest.setValue("apiKey= \(token)", forHTTPHeaderField: "Authorization")
             
             
             completion(.success(urlRequest))

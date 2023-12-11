@@ -14,7 +14,7 @@ struct Constants {
     static let base = "https://newsapi.org"
     static let socketPort = "3070"
     static let baseUrl = "\(base)/v2/"
-   
+    static let APIKey = "57c64a59ec4649afbbada24f5244a4f3"
     struct Error {
         static let networkErrorMessage = "networkErrorMessage"
     }

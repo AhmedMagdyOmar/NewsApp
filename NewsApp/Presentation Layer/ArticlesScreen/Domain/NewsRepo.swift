@@ -9,12 +9,12 @@ import Foundation
 
 
 class GetAllMainNews: RequestMaker {
-    @GET<MainNewsDataModel>(url: .path("everything?q=apple&from=2023-11-20&apiKey=57c64a59ec4649afbbada24f5244a4f3"))
+    @GET<MainNewsDataModel>(url: .path("everything?q=apple&from=2023-11-20&apiKey=\(Constants.APIKey)"))
     var network: any Network<MainNewsDataModel>
 }
 
 class SearchForNews: RequestMaker {
-    @GET<MainNewsDataModel>(url: .path("everything?apiKey=57c64a59ec4649afbbada24f5244a4f3"))
+    @GET<MainNewsDataModel>(url: .path("everything?apiKey=\(Constants.APIKey)"))
     var network: any Network<MainNewsDataModel>
 }
 
