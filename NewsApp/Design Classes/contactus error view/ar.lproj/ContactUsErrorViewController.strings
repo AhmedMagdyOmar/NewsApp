@@ -1,0 +1,12 @@
+
+/* Class = "UIButton"; normalTitle = "Dismiss"; ObjectID = "3iZ-ih-F1V"; */
+"3iZ-ih-F1V.normalTitle" = "تجاهل";
+
+/* Class = "UIButton"; normalTitle = "Contact Us"; ObjectID = "4a8-3k-98S"; */
+"4a8-3k-98S.normalTitle" = "تواصل معنا";
+
+/* Class = "UILabel"; text = "Because you are important to us, we review your data so you can receive trips. We will notify you after finishing."; ObjectID = "Bk8-AN-2TY"; */
+"Bk8-AN-2TY.text" = "لأنك مهم بالنسبة لنا ، نقوم بمراجعة بياناتك حتى تتمكن من إستقبال الرحلات. سوف نخطرك بعد الإنتهاء.";
+
+/* Class = "UIButton"; normalTitle = "Button"; ObjectID = "elO-y0-KrM"; */
+"elO-y0-KrM.normalTitle" = "Button";

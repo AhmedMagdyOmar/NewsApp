@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>CLIENT_ID</key>
+	<string>805342500132-4h2h3slrt1ieipf0p5gbi2d3c441s0qb.apps.googleusercontent.com</string>
+	<key>REVERSED_CLIENT_ID</key>
+	<string>com.googleusercontent.apps.805342500132-4h2h3slrt1ieipf0p5gbi2d3c441s0qb</string>
+	<key>API_KEY</key>
+	<string>AIzaSyCLfhR28tk2B4unE4rH4XggZYHv3xQogh0</string>
+	<key>GCM_SENDER_ID</key>
+	<string>805342500132</string>
+	<key>PLIST_VERSION</key>
+	<string>1</string>
+	<key>BUNDLE_ID</key>
+	<string>com.alalmiya.zoz-client</string>
+	<key>PROJECT_ID</key>
+	<string>zozapp</string>
+	<key>STORAGE_BUCKET</key>
+	<string>zozapp.appspot.com</string>
+	<key>IS_ADS_ENABLED</key>
+	<false></false>
+	<key>IS_ANALYTICS_ENABLED</key>
+	<false></false>
+	<key>IS_APPINVITE_ENABLED</key>
+	<true></true>
+	<key>IS_GCM_ENABLED</key>
+	<true></true>
+	<key>IS_SIGNIN_ENABLED</key>
+	<true></true>
+	<key>GOOGLE_APP_ID</key>
+	<string>1:805342500132:ios:f0b6fb56e4ce3f2a43cfb1</string>
+</dict>
+</plist>
