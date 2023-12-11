@@ -6,21 +6,17 @@
 //
 
 import UIKit
-enum StatusMode {
-    case firstTime
-    case secondTime
-}
+
 class NewsHomeViewController: BaseController {
 
     //MARK: - Vars
     let vm: NewsHomeViewModel!
-    var statusMode: StatusMode = .firstTime
     
     //MARK: - Outlets
   
     @IBOutlet weak var tableView: UITableView!
+    @IBOutlet weak var searchBar: UISearchBar!
     
-  //  @IBOutlet weak var searchBar: UISearchBar!
     //MARK: - View LifeCycle
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -40,7 +36,7 @@ class NewsHomeViewController: BaseController {
     
     func updateView() {
         title = "News"
-       // searchBar.delegate = self
+        searchBar.delegate = self
         tableView.delegate = self
         tableView.dataSource = self
         tableView.register(cellType: NewsTableViewCell.self)
@@ -57,7 +53,6 @@ extension NewsHomeViewController: UITableViewDelegate, UITableViewDataSource {
         return 1
     }
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        print("the count me is \(vm.getNewsCount)")
         return vm.getNewsCount
     }
     
@@ -75,21 +70,23 @@ extension NewsHomeViewController: UITableViewDelegate, UITableViewDataSource {
     }
     
 }
-//
-////MARK: - SearchBar Config
-//extension NewsHomeViewController: UISearchBarDelegate {
-//    func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
-//        presenter.didChange(text: searchText)
-//    }
-//}
-//
-////MARK: - View Protocol
-//extension NewsHomeViewController: ArticlesHomeViewProtocol {
-//    func reloadTableView() {
-//        self.tableView.reloadData()
-//    }
-//}
 
+//MARK: - SearchBar Config
+extension NewsHomeViewController: UISearchBarDelegate {
+    func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
+        if searchText.isEmpty {
+            vm.viewDidLoad()
+            searchBar.resignFirstResponder()
+        }
+    }
+      
+    func searchBarSearchButtonClicked(_ searchBar: UISearchBar) {
+            if let searchText = searchBar.text, !searchText.isEmpty {
+                vm.searcNews(keyWord: searchText)
+                searchBar.resignFirstResponder()
+            }
+        }
+}
 
 
 extension NewsHomeViewController {

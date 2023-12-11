@@ -31,7 +31,6 @@ class NewsDetailsViewController: UIViewController {
         super.viewDidLoad()
         setData()
         setUI()
-        // Do any additional setup after loading the view.
     }
 
 
@@ -46,7 +45,7 @@ class NewsDetailsViewController: UIViewController {
         titleLable.text = vm.getTitle
         autorLable.text = "Writen By" + " " + vm.getAuthor
         descriptiontextView.text = vm.getDescription
-        sourceLable.text = vm.getSource
+        sourceLable.text = "Source:" + " " + vm.getSource
         
     }
 

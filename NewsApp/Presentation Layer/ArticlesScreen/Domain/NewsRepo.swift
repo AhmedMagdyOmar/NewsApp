@@ -13,8 +13,13 @@ class GetAllMainNews: RequestMaker {
     var network: any Network<MainNewsDataModel>
 }
 
+class SearchForNews: RequestMaker {
+    @GET<MainNewsDataModel>(url: .path("everything?apiKey=57c64a59ec4649afbbada24f5244a4f3"))
+    var network: any Network<MainNewsDataModel>
+}
 
 class MainNewsDataSource {
     let getAllMainNews: any RequestMaker<MainNewsDataModel> = GetAllMainNews()
-    
+    let searchForNews: any RequestMaker<MainNewsDataModel> = SearchForNews()
+
 }
