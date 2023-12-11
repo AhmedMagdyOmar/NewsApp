@@ -19,6 +19,9 @@
 		E26700EF2B2212B4007798BC /* NewsHomeViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = E26700ED2B2212B4007798BC /* NewsHomeViewController.xib */; };
 		E2B86A532B25E1E80059A4D6 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E2B86A512B25E1E70059A4D6 /* LaunchScreen.storyboard */; };
 		E2B86A552B25E3DD0059A4D6 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2B86A542B25E3DD0059A4D6 /* SceneDelegate.swift */; };
+		E2B86A592B274F250059A4D6 /* NewsDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2B86A572B274F240059A4D6 /* NewsDetailsViewController.swift */; };
+		E2B86A5A2B274F250059A4D6 /* NewsDetailsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = E2B86A582B274F240059A4D6 /* NewsDetailsViewController.xib */; };
+		E2B86A5C2B2750CC0059A4D6 /* NewDetailsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2B86A5B2B2750CC0059A4D6 /* NewDetailsViewModel.swift */; };
 		E2CBF8242B1F858A00B6DED5 /* NewsAppTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2CBF8232B1F858A00B6DED5 /* NewsAppTests.swift */; };
 		E2CBF82E2B1F858A00B6DED5 /* NewsAppUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2CBF82D2B1F858A00B6DED5 /* NewsAppUITests.swift */; };
 		E2CBF8302B1F858A00B6DED5 /* NewsAppUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2CBF82F2B1F858A00B6DED5 /* NewsAppUITestsLaunchTests.swift */; };
@@ -186,6 +189,9 @@
 		E26700ED2B2212B4007798BC /* NewsHomeViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = NewsHomeViewController.xib; sourceTree = "<group>"; };
 		E2B86A522B25E1E70059A4D6 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = LaunchScreen.storyboard; sourceTree = "<group>"; };
 		E2B86A542B25E3DD0059A4D6 /* SceneDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
+		E2B86A572B274F240059A4D6 /* NewsDetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsDetailsViewController.swift; sourceTree = "<group>"; };
+		E2B86A582B274F240059A4D6 /* NewsDetailsViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = NewsDetailsViewController.xib; sourceTree = "<group>"; };
+		E2B86A5B2B2750CC0059A4D6 /* NewDetailsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewDetailsViewModel.swift; sourceTree = "<group>"; };
 		E2CBF8092B1F858600B6DED5 /* NewsApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = NewsApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E2CBF8152B1F858900B6DED5 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		E2CBF81A2B1F858900B6DED5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -446,6 +452,15 @@
 				E2B86A512B25E1E70059A4D6 /* LaunchScreen.storyboard */,
 			);
 			path = Base.lproj;
+			sourceTree = "<group>";
+		};
+		E2B86A562B274F020059A4D6 /* NewsDetails */ = {
+			isa = PBXGroup;
+			children = (
+				E2B86A572B274F240059A4D6 /* NewsDetailsViewController.swift */,
+				E2B86A582B274F240059A4D6 /* NewsDetailsViewController.xib */,
+			);
+			name = NewsDetails;
 			sourceTree = "<group>";
 		};
 		E2CBF8002B1F858600B6DED5 = {
@@ -734,6 +749,8 @@
 		E2CBF8B42B1F968C00B6DED5 /* Presentation Layer */ = {
 			isa = PBXGroup;
 			children = (
+				E2B86A5B2B2750CC0059A4D6 /* NewDetailsViewModel.swift */,
+				E2B86A562B274F020059A4D6 /* NewsDetails */,
 				E26700D52B21E992007798BC /* ArticlesScreen */,
 			);
 			path = "Presentation Layer";
@@ -998,6 +1015,7 @@
 				E2B86A532B25E1E80059A4D6 /* LaunchScreen.storyboard in Resources */,
 				E2CBFA552B1F968E00B6DED5 /* GE_SS_Two_Light.otf in Resources */,
 				E2CBFB222B1F969000B6DED5 /* CustomPickerTableViewCell.xib in Resources */,
+				E2B86A5A2B274F250059A4D6 /* NewsDetailsViewController.xib in Resources */,
 				E2CBFA4B2B1F968E00B6DED5 /* GoogleService-Info.plist in Resources */,
 				E2CBFB1A2B1F969000B6DED5 /* ContactUsErrorViewController.strings in Resources */,
 				E2CBFB122B1F969000B6DED5 /* NoDataView.strings in Resources */,
@@ -1224,6 +1242,7 @@
 				E2CBFA242B1F968E00B6DED5 /* Color+.swift in Sources */,
 				E2CBFA2C2B1F968E00B6DED5 /* UIImagePickerController+extenion.swift in Sources */,
 				E2CBFAFD2B1F968F00B6DED5 /* PasswordTextField.swift in Sources */,
+				E2B86A592B274F250059A4D6 /* NewsDetailsViewController.swift in Sources */,
 				E2CBFA272B1F968E00B6DED5 /* View+.swift in Sources */,
 				E2CBFA512B1F968E00B6DED5 /* CollectionViewCellProtocol.swift in Sources */,
 				E26700E02B21E992007798BC /* NewsHomeViewModelIMP.swift in Sources */,
@@ -1268,6 +1287,7 @@
 				E2CBFB1E2B1F969000B6DED5 /* ContainerShadowView.swift in Sources */,
 				E2CBFA4F2B1F968E00B6DED5 /* AlertViewHandler.swift in Sources */,
 				E2CBFA322B1F968E00B6DED5 /* Double.swift in Sources */,
+				E2B86A5C2B2750CC0059A4D6 /* NewDetailsViewModel.swift in Sources */,
 				E2CBFA352B1F968E00B6DED5 /* TextFiled+.swift in Sources */,
 				E2CBFB162B1F969000B6DED5 /* ViewWithButtonEffect.swift in Sources */,
 				E2CBFA102B1F968E00B6DED5 /* CALayer+.swift in Sources */,

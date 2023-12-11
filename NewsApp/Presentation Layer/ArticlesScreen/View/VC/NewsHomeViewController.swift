@@ -68,7 +68,10 @@ extension NewsHomeViewController: UITableViewDelegate, UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-
+        let item = vm.getNewsItem(index: indexPath.row)
+        let vm = NewsDetailsViewModelIMP(newsModel: item)
+        let vc = NewsDetailsViewController(vm: vm)
+        push(vc)
     }
     
 }
