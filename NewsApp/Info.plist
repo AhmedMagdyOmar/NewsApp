@@ -9,5 +9,24 @@
 		<key>UISceneConfigurations</key>
 		<dict/>
 	</dict>
+    
+    <key>NSAppTransportSecurity</key>
+    <dict>
+        <!-- Allow arbitrary loads -->
+        <key>NSAllowsArbitraryLoads</key>
+        <true/>
+        <!-- Allow connections to specific domains -->
+        <key>NSExceptionDomains</key>
+        <dict>
+            <key>example.com</key>
+            <dict>
+                <key>NSIncludesSubdomains</key>
+                <true/>
+                <key>NSExceptionAllowsInsecureHTTPLoads</key>
+                <true/>
+            </dict>
+        </dict>
+    </dict>
+
 </dict>
 </plist>

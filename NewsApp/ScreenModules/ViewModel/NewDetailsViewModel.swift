@@ -20,31 +20,31 @@ class NewsDetailsViewModelIMP : NewsDetailsViewModel {
     
     @Published var state: ScreenState<String> = .ideal
     @Published var data: Data?
-    var newsModel: NewsModel!
-    init(newsModel: NewsModel) {
+    var newsModel: NewItemEntity!
+    init(newsModel: NewItemEntity) {
         self.newsModel = newsModel
     }
     var getNewsImage: String {
-        return newsModel.urlToImage ?? ""
+        return newsModel.urlToImage
     }
     var getAuthor:String {
-        return newsModel.author ?? ""
+        return newsModel.author
 
     }
     var getTitle: String {
-        return newsModel.title ?? ""
+        return newsModel.title
     }
     
     var getSource: String {
-        return newsModel.source?.name ?? ""
+        return newsModel.sourceName
     }
 
     
     var getDescription: String {
-        return newsModel.articleDescription ?? ""
+        return newsModel.articleDescription
     }
     var getMarinArticleURL: String {
-        return newsModel.url ?? ""
+        return newsModel.articleURL
     }
 
 }

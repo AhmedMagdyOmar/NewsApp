@@ -9,6 +9,7 @@ import UIKit
 import AlamofireEasyLogger
 import GoogleMaps
 import IQKeyboardManagerSwift
+import CoreData
 
 @main
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -30,6 +31,33 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         IQKeyboardManager.shared.enable = true
         return true
     }
+    
+    
+    lazy var persistentContainer: NSPersistentContainer = {
+      
+        let container = NSPersistentContainer(name: "NewsModel")
+        container.loadPersistentStores(completionHandler: { (storeDescription, error) in
+            if let error = error as NSError? {
+                fatalError("Unresolved error \(error), \(error.userInfo)")
+            }
+        })
+        return container
+    }()
+
+    // MARK: - Core Data Saving support
+
+    func saveContext () {
+        let context = persistentContainer.viewContext
+        if context.hasChanges {
+            do {
+                try context.save()
+            } catch {
+             
+                let nserror = error as NSError
+                fatalError("Unresolved error \(nserror), \(nserror.userInfo)")
+            }
+        }
+    }
 }
 
 
@@ -42,14 +70,8 @@ extension AppDelegate {
         window = UIWindow()
         window?.backgroundColor = .white
         window?.makeKeyAndVisible()
-       // window?.rootViewController = TabBarController()//IntroViewController().toNavigation
-        //if UserDefaults.userData?.token == nil {
-        let vm = NewsHomeViewModelIMP()
-        window?.rootViewController = NewsHomeViewController(viewModel: vm).toNavigation
-        //}else{
-           // window?.rootViewController = TabBarController()
-
-        //}
+        window?.rootViewController = ObjectFactoryIMP.mainNewsScreen.viewController.toNavigation
+   
     }
     
     private func setLanguage(){
@@ -74,40 +96,6 @@ extension AppDelegate {
     }
     
     func appConfig() {
-        //IQKeyboardManager.shared.enable = true
+        IQKeyboardManager.shared.enable = true
     }
 }
-
-//    extension UIApplication {
-//        var statusBarUIView: UIView? {
-//
-//            if #available(iOS 13.0, *) {
-//                let tag = 3848245
-//
-//                let keyWindow = UIApplication.shared.connectedScenes
-//                    .map({$0 as? UIWindowScene})
-//                    .compactMap({$0})
-//                    .first?.windows.first
-//
-//                if let statusBar = keyWindow?.viewWithTag(tag) {
-//                    return statusBar
-//                } else {
-//                    let height = keyWindow?.windowScene?.statusBarManager?.statusBarFrame ?? .zero
-//                    let statusBarView = UIView(frame: height)
-//                    statusBarView.tag = tag
-//                    statusBarView.layer.zPosition = 999999
-//
-//                    keyWindow?.addSubview(statusBarView)
-//                    return statusBarView
-//                }
-//
-//            } else {
-//
-//                if responds(to: Selector(("statusBar"))) {
-//                    return value(forKey: "statusBar") as? UIView
-//                }
-//            }
-//            return nil
-//        }
-//    }
-    

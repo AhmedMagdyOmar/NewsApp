@@ -7,10 +7,6 @@
 
 import UIKit
 
-protocol ArticleTableViewCellProtocol {
-    func display(model: ArticleCellViewModel)
-}
-
 class NewsTableViewCell: UITableViewCell {
 
     @IBOutlet weak var containerView: UIView! {
@@ -35,11 +31,11 @@ class NewsTableViewCell: UITableViewCell {
 
     }
     
-    func configCell(item: NewsModel) {
+    func configCell(item: NewItemEntity) {
         articleImageView.load(with: item.urlToImage)
         articleHeadLineLabel.text = item.title
-        articleDateLabel.text = "\(item.publishedAt ?? "")"
+        articleDateLabel.text = "\(item.publishedAt)"
         articleShortDescriptionLabel.text = item.articleDescription
-        articleSourceNewsPaperLabel.text = item.source?.name
+        articleSourceNewsPaperLabel.text = item.sourceName
     }
 }

@@ -21,7 +21,7 @@ class NewsHomeViewController: BaseController {
     override func viewDidLoad() {
         super.viewDidLoad()
         bindState()
-        vm.viewDidLoad()
+        vm.checkConnection()
         updateView()
     }
     
@@ -64,8 +64,7 @@ extension NewsHomeViewController: UITableViewDelegate, UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         let item = vm.getNewsItem(index: indexPath.row)
-        let vm = NewsDetailsViewModelIMP(newsModel: item)
-        let vc = NewsDetailsViewController(vm: vm)
+        let vc = ObjectFactoryIMP.screenDetails(newsItemEntity: item).viewController
         push(vc)
     }
     
@@ -75,7 +74,7 @@ extension NewsHomeViewController: UITableViewDelegate, UITableViewDataSource {
 extension NewsHomeViewController: UISearchBarDelegate {
     func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
         if searchText.isEmpty {
-            vm.viewDidLoad()
+            vm.checkConnection()
             searchBar.resignFirstResponder()
         }
     }

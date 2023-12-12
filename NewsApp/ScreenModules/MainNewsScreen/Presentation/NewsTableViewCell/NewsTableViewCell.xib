@@ -23,7 +23,7 @@
                             <stackView opaque="NO" contentMode="scaleToFill" alignment="top" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="fOE-fZ-vil">
                                 <rect key="frame" x="5" y="5" width="341" height="152"/>
                                 <subviews>
-                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="1nL-xz-jlr">
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="myPic" translatesAutoresizingMaskIntoConstraints="NO" id="1nL-xz-jlr">
                                         <rect key="frame" x="0.0" y="0.0" width="70" height="100"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="100" id="4te-6a-umT"/>
@@ -68,6 +68,9 @@
                                                 <nil key="highlightedColor"/>
                                             </label>
                                         </subviews>
+                                        <constraints>
+                                            <constraint firstAttribute="trailing" secondItem="t2h-B7-2fs" secondAttribute="trailing" constant="5" id="8cR-Hz-AaH"/>
+                                        </constraints>
                                     </stackView>
                                 </subviews>
                             </stackView>
@@ -106,6 +109,7 @@
         </tableViewCell>
     </objects>
     <resources>
+        <image name="myPic" width="1366" height="768"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
